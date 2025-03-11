@@ -284,7 +284,29 @@ header .navbar {
 .testimonials-section .swiper-slide-button:hover {
   color: var(--primary-color);
 }
-
+/* gallery section styling  */
+.gallery-section {
+  padding: 50px 0 100px;
+}
+.gallery-section .gallery-list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.gallery-section .gallery-list .gallery-item {
+  overflow: hidden;
+  border-radius: var(--border-radius-s);
+  width: calc(100% / 3 - 32px);
+}
+.gallery-section .gallery-item .gallery-image {
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+  transition: 0.3s ease;
+}
+.gallery-section .gallery-item:hover .gallery-image {
+  transform: scale(1.3);
+}
 /* Responsive media query code for max width 1024px*/
 @media screen and (max-width: 1024px) {
   .menu-section .menu-list .menu-item {
@@ -387,13 +409,20 @@ header .navbar {
   .menu-section .menu-list .menu-item .menu-image {
     max-width: 200px;
   }
+  .gallery-section .gallery-list {
+    gap: 30px;
+  }
+  .gallery-section .gallery-list .gallery-item {
+    width: calc(100% / 2 - 30px);
+  }
 }
 /* Responsive media query code for max width 640px*/
 @media screen and (max-width: 640px) {
   .menu-section .menu-list {
     gap: 60px;
   }
-  .menu-section .menu-list .menu-item {
+  .menu-section .menu-list .menu-item,
+  .gallery-section .gallery-list .gallery-item {
     width: 100%;
   }
   .testimonials-section .slider-wraper {
